@@ -4,7 +4,7 @@ import { LinkContainer } from "react-router-bootstrap"
 
 const NavBar = () => {
   return (
-    <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg">
+    <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg" sticky="top">
       <Container>
         <Navbar.Brand href="#home">
           <img
@@ -19,7 +19,7 @@ const NavBar = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="ms-auto">
             <LinkContainer to="/">
               <Nav.Link>Home</Nav.Link>
             </LinkContainer>
@@ -28,6 +28,12 @@ const NavBar = () => {
             </LinkContainer>
             <LinkContainer to="/long">
               <Nav.Link>Long</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/page2">
+              <Nav.Link>Page2</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/page3">
+              <Nav.Link>Page3</Nav.Link>
             </LinkContainer>
             <NavDropdown title="More" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
