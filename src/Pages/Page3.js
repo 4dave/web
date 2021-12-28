@@ -2,7 +2,7 @@ import React from "react"
 
 const Page3 = () => {
   return (
-    <div>
+    <div className="page-container">
       <h1>Page 3</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore
