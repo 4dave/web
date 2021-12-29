@@ -1,6 +1,6 @@
 import React from "react"
 // import { MdSearch } from "react-icons/md"
-import { Container, Col, Row, FormControl, Form, Button } from "react-bootstrap"
+import { Container, Col, Row, FormControl, Form } from "react-bootstrap"
 
 const Search = ({ handleSearchNote }) => {
   return (
