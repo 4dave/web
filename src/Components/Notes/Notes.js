@@ -9,22 +9,22 @@ export default function Notes() {
   const [notes, setNotes] = useState([
     {
       id: nanoid(),
-      text: "This is my first note!",
+      text: "this is my first note!",
       date: "12/01/2021",
     },
     {
       id: nanoid(),
-      text: "This is my second note!",
+      text: "feel free to delete these and create your own!",
       date: "12/02/2021",
     },
     {
       id: nanoid(),
-      text: "This is my third note!",
+      text: "notes are saved to your device",
       date: "12/03/2021",
     },
     {
       id: nanoid(),
-      text: "This is my fourth note!",
+      text: 'these aren\'t saved on a server or viewable by others, they are just "local" to your phone or pc',
       date: "12/04/2021",
     },
   ])
