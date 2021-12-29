@@ -1,18 +1,30 @@
 import { MdDeleteForever } from "react-icons/md"
+import { Container, Col, Row, Card } from "react-bootstrap"
 
 const Note = ({ id, text, date, handleDeleteNote }) => {
   return (
-    <div className="note">
-      <span>{text}</span>
-      <div className="note-footer">
-        <small>{date}</small>
-        <MdDeleteForever
-          onClick={() => handleDeleteNote(id)}
-          className="delete-icon"
-          size="1.3em"
-        />
-      </div>
-    </div>
+    <>
+      <Container fluid="md">
+        <Row>
+          <Col>
+            <Card>
+              <Card.Body>
+                <Card.Title>
+                  <h3>{text}</h3>
+                </Card.Title>
+                <Card.Text>
+                  <p>{date}</p>
+                </Card.Text>
+                <Card.Link href="#" onClick={() => handleDeleteNote(id)}>
+                  <MdDeleteForever />
+                </Card.Link>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+      <br />
+    </>
   )
 }
 
