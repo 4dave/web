@@ -3,7 +3,8 @@ import { useState, useEffect } from "react"
 import { nanoid } from "nanoid"
 import NotesList from "./NotesList"
 import Search from "./Search"
-import "./notes.css"
+// import {} from "react-bootstrap"
+// import "./notes.css"
 
 export default function Notes() {
   const [notes, setNotes] = useState([
@@ -62,16 +63,14 @@ export default function Notes() {
   return (
     <div className="page-container">
       <h1>Notes</h1>
-      <div className="notes-container">
-        <Search handleSearchNote={setSearchText} />
-        <NotesList
-          notes={notes.filter((note) =>
-            note.text.toLowerCase().includes(searchText)
-          )}
-          handleAddNote={addNote}
-          handleDeleteNote={deleteNote}
-        />
-      </div>
+      <Search handleSearchNote={setSearchText} />
+      <NotesList
+        notes={notes.filter((note) =>
+          note.text.toLowerCase().includes(searchText)
+        )}
+        handleAddNote={addNote}
+        handleDeleteNote={deleteNote}
+      />
     </div>
   )
 }

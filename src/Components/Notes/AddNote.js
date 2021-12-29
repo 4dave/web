@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Container, Col, Row, Form, FormControl, Button } from "react-bootstrap"
 
 const AddNote = ({ handleAddNote }) => {
   const [noteText, setNoteText] = useState("")
@@ -18,21 +19,32 @@ const AddNote = ({ handleAddNote }) => {
   }
 
   return (
-    <div className="note new">
-      <textarea
-        rows="8"
-        cols="10"
-        placeholder="Type to add a note..."
-        value={noteText}
-        onChange={handleChange}
-      ></textarea>
-      <div className="note-footer">
-        <small>{characterLimit - noteText.length} Remaining</small>
-        <button className="save" onClick={handleSaveClick}>
-          Save
-        </button>
-      </div>
-    </div>
+    <>
+      <Container fluid="md">
+        <Row className="justify-content-md-center">
+          <Col md="auto">
+            <Form className="d-flex">
+              <FormControl
+                type="text"
+                placeholder="Type to add a note..."
+                className="me-2"
+                aria-label="Add Note"
+                onChange={handleChange}
+                value={noteText}
+              />
+              <small>{characterLimit - noteText.length} Remaining</small>
+            </Form>
+
+            <br />
+            <div className="d-grid gap-2">
+              <Button variant="primary" size="md" onClick={handleSaveClick}>
+                Save
+              </Button>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </>
   )
 }
 
