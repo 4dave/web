@@ -5,9 +5,12 @@ import { Row, Col } from "react-bootstrap"
 const NotesList = ({ notes, handleAddNote, handleDeleteNote }) => {
   return (
     <div>
-      <Row xs={1}>
+      <Row
+        xs={1}
+        style={{ justifyContent: "space-around", alignItems: "center" }}
+      >
         {notes.map((note) => (
-          <Col className="col-md-4" key={note.id}>
+          <Col sm="auto" key={note.id}>
             <Note
               key={note.id}
               id={note.id}

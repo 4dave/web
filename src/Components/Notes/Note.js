@@ -4,7 +4,7 @@ import { Container, Card, CardGroup } from "react-bootstrap"
 const Note = ({ id, text, date, handleDeleteNote }) => {
   return (
     <>
-      <Container fluid="sm">
+      <Container fluid="sm" style={{ padding: "0" }}>
         <CardGroup>
           <Card
             style={{

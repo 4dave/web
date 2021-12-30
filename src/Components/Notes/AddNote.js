@@ -28,6 +28,7 @@ const AddNote = ({ handleAddNote }) => {
                 type="text"
                 placeholder="Type to add a note..."
                 className="me-2"
+                size="lg"
                 aria-label="Add Note"
                 onChange={handleChange}
                 value={noteText}
