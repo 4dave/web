@@ -3,7 +3,7 @@ import React from "react"
 const Long = () => {
   return (
     <div className="page-container">
-      <h1>Page3</h1>
+      <h1>A long page</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
         expedita minus iusto nam vitae, nobis reiciendis incidunt provident

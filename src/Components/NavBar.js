@@ -32,9 +32,13 @@ const NavBar = () => {
             <LinkContainer to="/page2">
               <Nav.Link>Page2</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/page3">
-              <Nav.Link>Page3</Nav.Link>
+            <LinkContainer to="/login">
+              <Nav.Link>Login</Nav.Link>
             </LinkContainer>
+            <LinkContainer to="/secret">
+              <Nav.Link>Secret</Nav.Link>
+            </LinkContainer>
+
             <NavDropdown title="More" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -42,8 +46,10 @@ const NavBar = () => {
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
+              <NavDropdown.Item>
+                <LinkContainer to="/home">
+                  <Nav.Link>Logout</Nav.Link>
+                </LinkContainer>
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
