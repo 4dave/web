@@ -1,27 +1,45 @@
-import { MdDeleteForever } from "react-icons/md"
-import { Container, Col, Row, Card } from "react-bootstrap"
+import { MdDeleteForever, MdEdit } from "react-icons/md"
+import { Container, Card, CardGroup } from "react-bootstrap"
 
 const Note = ({ id, text, date, handleDeleteNote }) => {
   return (
     <>
-      <Container fluid="md">
-        <Row>
-          <Col>
-            <Card>
-              <Card.Body>
-                <Card.Title>
-                  <h3>{text}</h3>
-                </Card.Title>
-                <Card.Text>
-                  <p>{date}</p>
-                </Card.Text>
-                <Card.Link href="#" onClick={() => handleDeleteNote(id)}>
-                  <MdDeleteForever />
-                </Card.Link>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+      <Container fluid="sm" style={{ padding: "0" }}>
+        <CardGroup>
+          <Card
+            style={{
+              width: "20rem",
+              boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.444)",
+              minHeight: "10rem",
+            }}
+          >
+            <Card.Body>
+              <Card.Title>
+                <h3>{text}</h3>
+              </Card.Title>
+            </Card.Body>
+            <Card.Footer>
+              <small className="text-muted">{date}</small>
+              <span
+                style={{
+                  float: "right",
+                  cursor: "pointer",
+                }}
+              >
+                &nbsp; <MdEdit />
+              </span>
+              <span
+                style={{
+                  float: "right",
+                  cursor: "pointer",
+                }}
+                onClick={() => handleDeleteNote(id)}
+              >
+                &nbsp; <MdDeleteForever />
+              </span>
+            </Card.Footer>
+          </Card>
+        </CardGroup>
       </Container>
       <br />
     </>
