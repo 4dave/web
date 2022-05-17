@@ -15,6 +15,7 @@ const Search = ({ handleSearchNote }) => {
                 className="me-2"
                 aria-label="Search"
                 onChange={(e) => handleSearchNote(e.target.value)}
+                style={{textTransform: lowercase}}
               />
             </Form>
           </Col>
